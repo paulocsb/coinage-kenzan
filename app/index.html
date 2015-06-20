@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="coinageApp">
+<head>
+  <meta charset="utf-8">
+  <title>Coinage - Kenzan</title>
+  <link rel="stylesheet" media="all" href="css/styles.css" />
+  <script src="js/lib/jquery.min.js"></script>
+  <script src="js/lib/angular.min.js"></script>
+  <script src="js/coinage.js"></script>
+  <script src="js/services/coinage.service.js"></script>
+  <script src="js/filters/coinage.filter.js"></script>
+  <script src="js/controllers/coinage.controller.js"></script>
+</head>
+<body ng-controller="coinageController">
+  <div id="container">
+    <header>Coinage - Kenzan</header>
+    <form class="coin_form" method="post" ng-submit="calculateAmount()">
+      <fieldset>
+        Enter monetary value for coin conversion. <input class="amount" id="amount" name="amount" ng-model="amount" type="text" placeholder="Enter an amount">
+      </fieldset>
+    </form>
+    <p>{{ teste }}</p>
+    <table class="results">
+      <thead>
+        <th>Coin</th>
+        <th style="text-align: right;">Amount</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="amount in amounts | orderBy:'coin'">
+          <td>{{ amount.coin }}</td>
+          <td style="text-align: right;">{{ amount.count }}</td>
+        </tr>
+        <tr ng-show="amounts.length == 0">
+          <td colspan="2">Unable to process the input</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

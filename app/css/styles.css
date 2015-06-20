@@ -1,0 +1,70 @@
+body { 
+  font: normal normal 300 10pt/14pt sans-serif; 
+}
+
+header {
+  margin: 20px 0;
+  font: 14pt/18pt sans-serif;
+}
+
+div#container {
+  margin: 50px auto;
+  min-width: 250px;
+  max-width: 420px;
+}
+
+.coin_form fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.coin_form .amount {
+  padding: 5px;
+  width: 40%;
+
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+
+  background: #efefef;
+  border: 1px solid #ccc;
+
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+
+  outline: 0;
+}
+
+.coin_form .amount:focus {
+  box-shadow: 0px 0px 5px #ddd;
+}
+
+.results {
+  margin-top: 30px;
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.results th {
+  padding: 5px;
+  text-align: left;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.results td {
+  padding: 5px;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.results tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.results tbody tr td[colspan='2'] {
+  text-align: center;
+}
